@@ -1,0 +1,78 @@
+.risks {
+  @include blockWrapper;
+  margin-bottom: 16rem;
+  @media only screen and (max-width: 1279px) {
+    margin-bottom: 9.6rem;
+  }
+
+  @media only screen and (max-width: 767px) {
+    margin-bottom: 8rem;
+  }
+}
+
+.risks__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.risks__text-text-wrapper {
+  align-self: center;
+  max-width: 110.6rem;
+  width: 100%;
+  padding: 5rem;
+  font-size: 6.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 7.2rem;
+  text-transform: uppercase;
+  font-family: var(--despair-display);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+
+  svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 110%;
+    height: 120%;
+    z-index: -1;
+
+    @media only screen and (max-width: 767px) {
+      circle {
+        stroke-width: 2px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1279px) {
+    padding: 3.2rem;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4rem;
+    letter-spacing: 0.096rem;
+    text-transform: uppercase;
+    max-width: 59.6rem;
+  }
+
+  @media only screen and (max-width: 767px) {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.2rem;
+    letter-spacing: 0.072rem;
+    text-transform: uppercase;
+    padding: 5rem 5;
+  }
+
+  @media only screen and (max-width: 576px) {
+    padding: 3rem 4.3rem;
+
+    br {
+      display: none;
+    }
+  }
+}

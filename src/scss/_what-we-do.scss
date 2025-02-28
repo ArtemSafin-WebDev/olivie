@@ -1,0 +1,125 @@
+.what-we-do {
+  @include blockWrapper;
+  margin-bottom: 16rem;
+
+  @media (max-width: 1279px) {
+    margin-bottom: 9.6rem;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 8rem;
+  }
+}
+
+.what-we-do__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.what-we-do__heading {
+  font-size: 4.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 5.6rem;
+  letter-spacing: 0.144rem;
+  text-transform: uppercase;
+  font-family: var(--despair-display);
+  margin-bottom: 9.6rem;
+
+  @media (max-width: 1279px) {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4rem;
+    letter-spacing: 0.096rem;
+    text-transform: uppercase;
+    margin-bottom: 4.8rem;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.2rem;
+    letter-spacing: 0.072rem;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+  }
+}
+
+.what-we-do__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 2rem;
+  @media (max-width: 1279px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 4rem;
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 4rem;
+  }
+}
+
+.what-we-do__list-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.what-we-do__card {
+  display: flex;
+  flex-direction: column;
+}
+
+.what-we-do__card-icon {
+  width: 6.4rem;
+  height: 6.4rem;
+  margin-bottom: 3.2rem;
+  object-fit: contain;
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 1279px) {
+    width: 4.8rem;
+    height: 4.8rem;
+    margin-bottom: 1.6rem;
+  }
+}
+
+.what-we-do__card-title {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.2rem;
+  margin-bottom: 1.6rem;
+
+  @media (max-width: 1279px) {
+    margin-bottom: 0.8rem;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.8rem;
+  }
+}
+
+.what-we-do__card-text {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 3rem;
+
+  @media (max-width: 767px) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.4rem;
+  }
+}

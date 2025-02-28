@@ -1,0 +1,197 @@
+.philosophy {
+  @include blockWrapper;
+  background-color: var(--green);
+  color: white;
+  margin-bottom: 16rem;
+
+  @media only screen and (max-width: 1279px) {
+    margin-bottom: 9.6rem;
+  }
+
+  @media only screen and (max-width: 576px) {
+    margin-bottom: 8rem;
+  }
+}
+
+.philosophy__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+  padding-top: 6.4rem;
+  padding-bottom: 6.4rem;
+  @media only screen and (max-width: 1279px) {
+    padding: 4rem 0;
+  }
+}
+
+.philosophy__heading {
+  text-wrap: balance;
+  font-size: 6.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 7.2rem;
+  text-transform: uppercase;
+  font-family: var(--despair-display);
+  margin-bottom: 4rem;
+
+  @media only screen and (max-width: 1279px) {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4rem;
+    letter-spacing: 0.096rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  @media only screen and (max-width: 576px) {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.2rem;
+    letter-spacing: 0.072rem;
+    text-transform: uppercase;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  b {
+    color: var(--violet);
+    font-weight: inherit;
+  }
+
+  em {
+    color: var(--primary-color);
+    font-style: inherit;
+  }
+}
+
+.philosophy__text {
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 4rem;
+  max-width: 92rem;
+  margin-bottom: 16rem;
+
+  @media only screen and (max-width: 1440px) {
+    max-width: 72rem;
+  }
+
+  @media only screen and (max-width: 1279px) {
+    max-width: 66rem;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 3.2rem;
+    margin-bottom: 9.6rem;
+  }
+
+  @media only screen and (max-width: 576px) {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.8rem;
+  }
+}
+
+.philosophy__btns {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  @media only screen and (max-width: 1279px) {
+    gap: 1.6rem;
+  }
+
+  @media only screen and (max-width: 576px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.philosophy__outline-btn {
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.2rem;
+  letter-spacing: 0.072rem;
+  text-transform: uppercase;
+  font-family: var(--despair-display);
+  border-radius: 6rem;
+  border: 0.2rem solid var(--primary-color);
+  color: white;
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+  padding: 1.4rem 3.2rem;
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  @media only screen and (max-width: 1279px) {
+    gap: 1.6rem;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.2rem;
+    letter-spacing: 0.096rem;
+    text-transform: uppercase;
+    padding: 1.1rem 2.4rem;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  &:active {
+    color: var(--primary-color);
+  }
+}
+.philosophy__filled-btn {
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.2rem;
+  letter-spacing: 0.072rem;
+  text-transform: uppercase;
+  font-family: var(--despair-display);
+  border-radius: 6rem;
+  border: 0.2rem solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+  padding: 1.4rem 3.2rem;
+  &:link,
+  &:visited {
+    color: var(--text-color);
+  }
+
+  @media only screen and (max-width: 1279px) {
+    gap: 1.6rem;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.2rem;
+    letter-spacing: 0.096rem;
+    text-transform: uppercase;
+    padding: 1.1rem 2.4rem;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: var(--primary-color-hover);
+      border-color: var(--primary-color-hover);
+    }
+  }
+
+  &:active {
+    background-color: var(--primary-color-hover);
+    border-color: var(--primary-color-hover);
+  }
+}

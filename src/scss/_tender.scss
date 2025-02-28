@@ -1,0 +1,205 @@
+.tender {
+  @include blockWrapper;
+  background-color: var(--pale-green);
+}
+
+.tender__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+  min-height: 54.4rem;
+  padding: 6.4rem 0;
+  gap: 3.5rem;
+
+  .tender--about & {
+    min-height: 68.8rem;
+  }
+
+  @media only screen and (max-width: 1279px) {
+    min-height: 34.8rem;
+    padding: 4rem 0;
+    gap: 2rem;
+
+    .tender--about & {
+      min-height: 43rem;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding-top: 6.4rem;
+    padding-bottom: 4rem;
+    min-height: 38rem;
+    gap: 4rem;
+    .tender--about & {
+      min-height: 45rem;
+    }
+  }
+  @media only screen and (max-width: 576px) {
+    min-height: 46.2rem;
+    padding-top: 6.4rem;
+    padding-bottom: 3.2rem;
+    gap: 4rem;
+
+    .tender--about & {
+      min-height: 62.6rem;
+    }
+  }
+}
+
+.tender__heading {
+  font-size: 6.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 7.2rem;
+  text-transform: uppercase;
+  font-family: var(--despair-display);
+
+  @media only screen and (max-width: 1279px) {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4rem;
+    letter-spacing: 0.096rem;
+    text-transform: uppercase;
+  }
+
+  @media only screen and (max-width: 767px) {
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.4rem;
+    text-transform: uppercase;
+  }
+}
+
+.tender__text {
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 4rem;
+  max-width: 72rem;
+
+  .tender--about & {
+    max-width: 100rem;
+  }
+
+  @media only screen and (max-width: 1279px) {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 3.2rem;
+  }
+
+  @media only screen and (max-width: 767px) {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.8rem;
+  }
+}
+
+.tender__btns {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  gap: 2rem;
+
+  @media only screen and (max-width: 1279px) {
+    gap: 1.6rem;
+  }
+
+  @media only screen and (max-width: 576px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+  }
+}
+
+.tender__blue-btn {
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.2rem;
+  letter-spacing: 0.072rem;
+  text-transform: uppercase;
+  font-family: var(--despair-display);
+  border-radius: 6rem;
+  border: 0.2rem solid var(--blue);
+  background-color: var(--blue);
+  color: white;
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+  padding: 1.4rem 3.2rem;
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  @media only screen and (max-width: 1279px) {
+    gap: 1.6rem;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.2rem;
+    letter-spacing: 0.096rem;
+    text-transform: uppercase;
+    padding: 1.1rem 2.4rem;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: white;
+      border-color: var(--blue-hover);
+      background-color: var(--blue-hover);
+    }
+  }
+
+  &:active {
+    color: white;
+    border-color: var(--blue-hover);
+    background-color: var(--blue-hover);
+  }
+}
+
+.tender__outline-btn {
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.2rem;
+  letter-spacing: 0.072rem;
+  text-transform: uppercase;
+  font-family: var(--despair-display);
+  border-radius: 6rem;
+  border: 0.2rem solid var(--text-color);
+  color: var(--text-color);
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+  padding: 1.4rem 3.2rem;
+  &:link,
+  &:visited {
+    color: var(--text-color);
+  }
+
+  @media only screen and (max-width: 1279px) {
+    gap: 1.6rem;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.2rem;
+    letter-spacing: 0.096rem;
+    text-transform: uppercase;
+    padding: 1.1rem 2.4rem;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      border-color: #919191;
+    }
+  }
+
+  &:active {
+    border-color: #919191;
+  }
+}

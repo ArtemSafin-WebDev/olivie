@@ -1,0 +1,31 @@
+:root {
+  --primary-color: rgb(205, 235, 105);
+  --primary-color-hover: rgb(191, 221, 94);
+  --pale-green: rgb(234, 243, 240);
+  --green: rgb(0, 77, 67);
+  --blue: rgb(53, 67, 194);
+  --blue-hover: rgb(45, 59, 185);
+  --violet: rgb(199, 125, 246);
+  --orange: rgb(254, 156, 103);
+  --text-color: black;
+  --raleway: "Raleway", serif;
+  --despair-display: "Despair Display", sans-serif;
+  --content-padding: 4rem;
+  --container-width: 160rem;
+
+  @media only screen and (max-width: 1279px) {
+    --container-width: 96rem;
+  }
+
+  @media only screen and (max-width: 768px) {
+    --content-padding: 2.4rem;
+  }
+
+  @media only screen and (max-width: 767px) {
+    --container-width: 57.5rem;
+  }
+
+  @media only screen and (max-width: 576px) {
+    --content-padding: 1.6rem;
+  }
+}
