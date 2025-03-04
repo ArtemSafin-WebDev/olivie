@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@types/dom-view-transitions": "^1.0.6",
     "@types/inputmask": "^5.0.3",
     "@types/node": "^20.7.0",
     "@types/postcss-preset-env": "^8.0.0",
