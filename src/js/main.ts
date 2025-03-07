@@ -20,6 +20,7 @@ import articleIcons from "./articleIcons";
 import whatWeDoFormats from "./whatWeDoFormats";
 import mediaModal from "./mediaModal";
 import ideas from "./ideas";
+import articleGallery from "./articleGallery";
 
 document.addEventListener("DOMContentLoaded", () => {
   menu();
@@ -42,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   articleIcons();
   whatWeDoFormats();
   ideas();
+  articleGallery();
 });
 
 window.addEventListener("load", () => {

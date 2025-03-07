@@ -124,6 +124,7 @@
   text-align: center;
   align-items: center;
   flex-grow: 1;
+  position: relative;
 
   .custom-cursor & {
     cursor: none;
@@ -251,6 +252,12 @@
   }
 }
 
+.formats__card-link-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 7;
+}
+
 .formats__card-tag {
   font-size: 2rem;
   font-style: normal;
@@ -260,6 +267,13 @@
   display: flex;
   align-items: center;
   gap: 1.2rem;
+  position: relative;
+  z-index: 9;
+
+  &:link,
+  &:visited {
+    color: var(--blue);
+  }
 
   &::after {
     content: "";
@@ -329,6 +343,8 @@
   transition: color 0.2s, border-color 0.2s, background-color 0.2s;
   text-align: center;
   color: var(--text-color);
+  position: relative;
+  z-index: 9;
   &:link,
   &:visited {
     color: var(--text-color);

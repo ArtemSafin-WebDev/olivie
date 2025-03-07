@@ -5,6 +5,7 @@ import project from "./pages-data/project";
 import project2 from "./pages-data/project2";
 import whatWeDo from "./pages-data/what-we-do";
 import event from "./pages-data/event";
+import idea from "./pages-data/idea";
 
 const pagesConfig = {
   ...home,
@@ -14,6 +15,7 @@ const pagesConfig = {
   ...project2,
   ...whatWeDo,
   ...event,
+  ...idea,
 };
 
 export default pagesConfig;
