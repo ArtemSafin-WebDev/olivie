@@ -256,6 +256,10 @@
   position: absolute;
   inset: 0;
   z-index: 7;
+
+  .custom-cursor & {
+    cursor: none;
+  }
 }
 
 .formats__card-tag {
@@ -269,6 +273,10 @@
   gap: 1.2rem;
   position: relative;
   z-index: 9;
+
+  .custom-cursor & {
+    cursor: none;
+  }
 
   &:link,
   &:visited {
@@ -348,6 +356,10 @@
   &:link,
   &:visited {
     color: var(--text-color);
+  }
+
+  .custom-cursor & {
+    cursor: none;
   }
 
   @media (hover: hover) and (pointer: fine) {
