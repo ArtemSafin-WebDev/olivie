@@ -4,6 +4,7 @@ import portfolio from "./pages-data/portfolio";
 import project from "./pages-data/project";
 import project2 from "./pages-data/project2";
 import whatWeDo from "./pages-data/what-we-do";
+import event from "./pages-data/event";
 
 const pagesConfig = {
   ...home,
@@ -12,6 +13,7 @@ const pagesConfig = {
   ...project,
   ...project2,
   ...whatWeDo,
+  ...event,
 };
 
 export default pagesConfig;

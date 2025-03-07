@@ -5,6 +5,10 @@
   width: 100%;
   z-index: 10;
   view-transition-name: header;
+
+  &--white {
+    color: white;
+  }
 }
 
 .page-header__top {
@@ -30,7 +34,7 @@
   align-items: center;
   gap: 2rem;
   justify-content: space-between;
-
+  color: var(--text-color);
   @media only screen and (max-width: 1279px) {
     margin: 0;
     padding: 1.2rem 1.6rem;
@@ -225,7 +229,7 @@
       display: block;
       width: 2.8rem;
       height: 0.2rem;
-      background-color: var(--text-color);
+      background-color: currentColor;
     }
   }
 

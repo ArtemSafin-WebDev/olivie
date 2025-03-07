@@ -19,6 +19,7 @@ import ellipsisBlock from "./ellipsisBlock";
 import articleIcons from "./articleIcons";
 import whatWeDoFormats from "./whatWeDoFormats";
 import mediaModal from "./mediaModal";
+import ideas from "./ideas";
 
 document.addEventListener("DOMContentLoaded", () => {
   menu();
@@ -40,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   faq();
   articleIcons();
   whatWeDoFormats();
+  ideas();
 });
 
 window.addEventListener("load", () => {

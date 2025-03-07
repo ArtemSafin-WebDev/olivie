@@ -49,6 +49,11 @@
   transition: opacity 0.2s, visibility 0s linear 0.2s;
   z-index: 20;
 
+  @media only screen and (max-width: 767px) {
+    --plyr-control-spacing: 14px;
+    --plyr-control-icon-size: 16px;
+  }
+
   .plyr__control--overlaid {
     background-color: #fff;
     color: var(--blue);

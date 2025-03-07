@@ -544,3 +544,114 @@
     text-transform: uppercase;
   }
 }
+
+.article-text__callback {
+  margin: 6.4rem 0;
+  border-radius: 0.4rem;
+  background: #dbedf7;
+  color: var(--text-color);
+  padding: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  @media only screen and (max-width: 1279px) {
+    margin: 4.8rem 0;
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding: 2.8rem 2rem;
+  }
+}
+
+.article-text__callback-text {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 3rem;
+  @media only screen and (max-width: 767px) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.4rem;
+  }
+}
+
+.article-text__callback-btns {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  @media only screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 1.2rem;
+  }
+}
+
+.article-text__callback-btn-outline {
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.2rem;
+  letter-spacing: 0.096rem;
+  text-transform: uppercase;
+  font-family: var(--despair-display);
+  border-radius: 4.5rem;
+  border: 0.15rem solid black;
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+  padding: 1.15rem 2.25rem;
+  color: black;
+
+  &:link,
+  &:visited {
+    color: black;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      border-color: #919191;
+    }
+  }
+
+  &:active {
+    border-color: #919191;
+  }
+}
+
+.article-text__callback-btn-filled {
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.2rem;
+  letter-spacing: 0.096rem;
+  text-transform: uppercase;
+  font-family: var(--despair-display);
+  border-radius: 4.5rem;
+  border: 0.15rem solid var(--blue);
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+  padding: 1.15rem 2.25rem;
+  color: white;
+  background-color: var(--blue);
+
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: var(--blue-hover);
+      border-color: var(--blue-hover);
+    }
+  }
+}

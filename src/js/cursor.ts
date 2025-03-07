@@ -21,7 +21,7 @@ export default function cursor() {
 
   const hoverableItems = Array.from(
     document.querySelectorAll<HTMLElement>(
-      ".portfolio-card, .reviews__slider-card, .portfolio__slider-card, .formats__card"
+      ".portfolio-card, .reviews__slider-card, .portfolio__slider-card, .formats__card, .ideas__slider-card, .project-gallery__card"
     )
   );
 
@@ -37,7 +37,7 @@ export default function cursor() {
         currentLayer = cursorLayers.find(
           (layer) => layer.dataset.cursor === "green"
         );
-      } else if (element.matches(".formats__card")) {
+      } else if (element.matches(".formats__card, .project-gallery__card")) {
         currentLayer = cursorLayers.find(
           (layer) => layer.dataset.cursor === "blue"
         );

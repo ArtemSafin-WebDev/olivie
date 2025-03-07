@@ -73,6 +73,12 @@
     color: var(--primary-color);
   }
 
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: white;
+    }
+  }
+
   @media only screen and (max-width: 767px) {
     font-size: 2.2rem;
     font-style: normal;
