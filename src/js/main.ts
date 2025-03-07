@@ -10,6 +10,15 @@ import whatWeDo from "./what-we-do";
 import risks from "./risks";
 import formats from "./formats";
 import cursor from "./cursor";
+import projectGallery from "./projectGallery";
+import fancybox from "./fancybox";
+import modals from "./modals";
+import player from "./player";
+import faq from "./faq";
+import ellipsisBlock from "./ellipsisBlock";
+import articleIcons from "./articleIcons";
+import whatWeDoFormats from "./whatWeDoFormats";
+import mediaModal from "./mediaModal";
 
 document.addEventListener("DOMContentLoaded", () => {
   menu();
@@ -20,8 +29,17 @@ document.addEventListener("DOMContentLoaded", () => {
   intro();
   whatWeDo();
   risks();
+  ellipsisBlock();
   formats();
   cursor();
+  mediaModal();
+  projectGallery();
+  fancybox();
+  modals();
+  player();
+  faq();
+  articleIcons();
+  whatWeDoFormats();
 });
 
 window.addEventListener("load", () => {

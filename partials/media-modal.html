@@ -1,0 +1,54 @@
+<div class="media-modal js-modal" id="media-modal">
+    <button class="media-modal__close js-modal-close">
+        <svg width="14" height="14" aria-hidden="true">
+            <use xlink:href="#cross"></use>
+        </svg>
+    </button>
+    <div class="media-modal__content">
+        <div class="media-modal__slider">
+            <button class="media-modal__slider-arrow media-modal__slider-arrow--prev">
+                <svg width="14" height="14" aria-hidden="true">
+                    <use xlink:href="#slider-arrow-left"></use>
+                </svg>
+            </button>
+            <div class="media-modal__slider-wrapper">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="media-modal__slider-card">
+                                <img src="/images/media-modal/1.webp" alt="" class="media-modal__slider-card-image">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="media-modal__slider-card">
+                                <img src="/images/media-modal/2.webp" alt="" class="media-modal__slider-card-image">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="media-modal__slider-card">
+                                <img src="/images/media-modal/1.webp" alt="" class="media-modal__slider-card-image">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="video-card">
+                                <div class="video-card__player">
+                                    <video playsinline="" controls="" data-poster="/images/preview.webp"
+                                        class="js-player">
+                                        <source
+                                            src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
+                                            type="video/mp4" />
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="media-modal__slider-arrow media-modal__slider-arrow--next">
+                <svg width="14" height="14" aria-hidden="true">
+                    <use xlink:href="#slider-arrow-right"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>

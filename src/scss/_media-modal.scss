@@ -1,0 +1,153 @@
+.media-modal {
+  background: rgba(black, 0.8);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overscroll-behavior-y: contain;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.4s, visibility 0s linear 0.4s;
+  opacity: 0;
+  visibility: hidden;
+  padding: 0rem var(--content-padding);
+
+  &.active {
+    opacity: 1;
+    visibility: inherit;
+    transition: opacity 0.4s, visibility 0.4s;
+  }
+
+  body:not(.loaded) & {
+    display: none;
+  }
+}
+
+.media-modal__content {
+  width: 100%;
+  max-width: 132rem;
+  margin: auto;
+}
+
+.media-modal__close {
+  position: absolute;
+  right: 6.4rem;
+  top: 6.4rem;
+  width: 4rem;
+  height: 4rem;
+  display: grid;
+  place-items: center;
+  z-index: 40;
+
+  @media only screen and (max-width: 767px) {
+    right: 3.2rem;
+    top: 3.2rem;
+  }
+  @media only screen and (max-width: 576px) {
+    right: var(--content-padding);
+    top: 2rem;
+  }
+
+  svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: #a0abb4;
+    transition: fill 0.2s;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      svg {
+        fill: var(--primary-color);
+      }
+    }
+  }
+}
+
+.media-modal__slider {
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+
+  @media only screen and (max-width: 1440px) {
+    gap: 6rem;
+  }
+  @media only screen and (max-width: 1280px) {
+    gap: 4rem;
+  }
+
+  .swiper-wrapper {
+    align-items: center;
+  }
+
+  .swiper {
+    @media only screen and (max-width: 767px) {
+      overflow: visible;
+    }
+  }
+}
+
+.media-modal__slider-wrapper {
+  width: 30%;
+  flex-grow: 1;
+}
+
+.media-modal__slider-card {
+  position: relative;
+  max-height: 88vh;
+  isolation: isolate;
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 77%;
+  }
+}
+
+.media-modal__slider-card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: -1;
+}
+
+.media-modal__slider-arrow {
+  flex-shrink: 0;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  display: grid;
+  place-items: center;
+  transition: background-color 0.2s, opacity 0.2s;
+  position: relative;
+  z-index: 30;
+
+  @media only screen and (max-width: 767px) {
+    display: none;
+  }
+
+  svg {
+    display: block;
+    width: 4.8rem;
+    height: 4.8rem;
+    fill: var(--text-color);
+  }
+
+  &.swiper-button-disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:not(.swiper-button-disabled):hover {
+      background-color: var(--primary-color-hover);
+    }
+  }
+}

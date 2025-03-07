@@ -1,0 +1,329 @@
+.faq {
+  @include blockWrapper;
+  background-color: var(--pale-green);
+}
+
+.faq__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+  padding-top: 6.4rem;
+  padding-bottom: 6.4rem;
+
+  @media only screen and (max-width: 1279px) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding-top: 6.4rem;
+    padding-bottom: 3.2rem;
+  }
+}
+
+.faq__heading {
+  font-size: 6.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 7.2rem;
+  text-transform: uppercase;
+  font-family: var(--despair-display);
+  margin-bottom: 6.4rem;
+
+  @media only screen and (max-width: 1279px) {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4rem;
+    letter-spacing: 0.096rem;
+    text-transform: uppercase;
+    margin-bottom: 4.8rem;
+  }
+
+  @media only screen and (max-width: 767px) {
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.4rem;
+    text-transform: uppercase;
+    margin-bottom: 6.4rem;
+  }
+}
+
+.faq__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.faq__list-item {
+  border-bottom: 1px solid rgba(#3543c2, 0.3);
+  &:last-child {
+    border: none;
+  }
+}
+
+.faq__accordion {
+  padding: 4.4rem 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 6rem;
+  cursor: pointer;
+  .faq__list-item:first-child & {
+    padding-top: 0;
+  }
+  .faq__list-item:last-child & {
+    padding-bottom: 0;
+  }
+
+  @media only screen and (max-width: 768px) {
+    gap: 2rem;
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding: 3.2rem 0;
+  }
+
+  @media only screen and (max-width: 576px) {
+    padding: 3.2rem 0;
+  }
+}
+
+.faq__accordion-left-col {
+  display: block;
+  width: 50%;
+  flex-grow: 1;
+}
+
+.faq__accordion-title {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.2rem;
+  letter-spacing: 0.072rem;
+  text-transform: uppercase;
+  font-family: var(--despair-display);
+
+  @media only screen and (max-width: 767px) {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.8rem;
+    letter-spacing: 0.06rem;
+    text-transform: uppercase;
+  }
+}
+
+.faq__accordion-dropdown {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
+
+  .faq__accordion.active & {
+    grid-template-rows: 1fr;
+  }
+}
+
+.faq__accordion-dropdown-inner {
+  grid-row: 1 / 2;
+  overflow: hidden;
+
+  @media only screen and (max-width: 768px) {
+    margin-right: -4.8rem;
+  }
+}
+
+.faq__accordion-dropdown-content {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 3.2rem;
+  user-select: unset;
+  cursor: text;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  max-width: 106rem;
+
+  @media only screen and (max-width: 1440px) {
+    max-width: 90rem;
+  }
+  @media only screen and (max-width: 1280px) {
+    max-width: 80rem;
+  }
+  @media only screen and (max-width: 1279px) {
+    max-width: none;
+  }
+
+  @media only screen and (max-width: 767px) {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.4rem;
+    padding-bottom: 0;
+    padding-top: 2rem;
+  }
+}
+
+.faq__accordion-icon {
+  flex-shrink: 0;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  transition: transform 0.4s;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 2.8rem;
+    height: 0.2rem;
+    background-color: var(--text-color);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  .faq__accordion.active & {
+    transform: rotate(45deg);
+  }
+}
+
+.faq__bottom {
+  margin-top: 16rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+
+  @media only screen and (max-width: 1279px) {
+    gap: 4rem;
+    margin-top: 12rem;
+  }
+}
+
+.faq__text {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 3.2rem;
+  max-width: 90rem;
+
+  @media only screen and (max-width: 1279px) {
+    max-width: none;
+  }
+  @media only screen and (max-width: 767px) {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.4rem;
+  }
+}
+
+.faq__btns {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  @media only screen and (max-width: 1279px) {
+    gap: 1.6rem;
+  }
+
+  @media only screen and (max-width: 576px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+  }
+}
+
+.faq__blue-btn {
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.2rem;
+  letter-spacing: 0.072rem;
+  text-transform: uppercase;
+  font-family: var(--despair-display);
+  border-radius: 6rem;
+  border: 0.2rem solid var(--blue);
+  background-color: var(--blue);
+  color: white;
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+  padding: 1.4rem 3.2rem;
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  @media only screen and (max-width: 1279px) {
+    gap: 1.6rem;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.2rem;
+    letter-spacing: 0.096rem;
+    text-transform: uppercase;
+    padding: 1.1rem 2.4rem;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: white;
+      border-color: var(--blue-hover);
+      background-color: var(--blue-hover);
+    }
+  }
+
+  &:active {
+    color: white;
+    border-color: var(--blue-hover);
+    background-color: var(--blue-hover);
+  }
+}
+
+.faq__outline-btn {
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.2rem;
+  letter-spacing: 0.072rem;
+  text-transform: uppercase;
+  font-family: var(--despair-display);
+  border-radius: 6rem;
+  border: 0.2rem solid var(--text-color);
+  color: var(--text-color);
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+  padding: 1.4rem 3.2rem;
+  &:link,
+  &:visited {
+    color: var(--text-color);
+  }
+
+  @media only screen and (max-width: 1279px) {
+    gap: 1.6rem;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.2rem;
+    letter-spacing: 0.096rem;
+    text-transform: uppercase;
+    padding: 1.1rem 2.4rem;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      border-color: #919191;
+    }
+  }
+
+  &:active {
+    border-color: #919191;
+  }
+}

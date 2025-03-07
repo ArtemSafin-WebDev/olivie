@@ -1,0 +1,73 @@
+.what-we-do-intro {
+  @include blockWrapper;
+  margin-bottom: 9.6rem;
+  background-color: var(--pale-green);
+  view-transition-name: portfoliointro;
+
+  @media only screen and (max-width: 1279px) {
+    margin-bottom: 8rem;
+  }
+
+  @media only screen and (max-width: 767px) {
+    margin-bottom: 4.8rem;
+  }
+}
+
+.what-we-do-intro__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3.2rem;
+  padding-top: 20rem;
+  min-height: 60rem;
+  background-image: url("../images/what-we-do-intro.svg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 64rem auto;
+
+  @media only screen and (max-width: 1279px) {
+    padding-bottom: 2.8rem;
+    padding-top: 15rem;
+    min-height: 46.8rem;
+    background-size: 50.6rem auto;
+  }
+
+  @media only screen and (max-width: 767px) {
+    min-height: 30rem;
+    padding-bottom: 1.6rem;
+    padding-top: 20rem;
+    background-size: 33.2rem auto;
+  }
+  @media only screen and (max-width: 576px) {
+    min-height: 32rem;
+  }
+}
+
+.what-we-do-intro__heading {
+  margin-top: auto;
+  font-size: 10rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 10rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  font-family: var(--despair-display);
+
+  @media only screen and (max-width: 1279px) {
+    font-size: 4.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 5.6rem;
+    letter-spacing: 0.144rem;
+    text-transform: uppercase;
+  }
+
+  @media only screen and (max-width: 767px) {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4.2rem;
+    letter-spacing: 0.096rem;
+    text-transform: uppercase;
+  }
+}

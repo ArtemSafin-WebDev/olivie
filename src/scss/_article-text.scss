@@ -5,6 +5,10 @@
   @media only screen and (max-width: 1279px) {
     margin-bottom: 9.6rem;
   }
+
+  @media only screen and (max-width: 767px) {
+    margin-bottom: 8rem;
+  }
 }
 
 .article-text__content {
@@ -192,6 +196,16 @@
     }
   }
 
+  .video-card {
+    margin: 6.4rem 0;
+    @media only screen and (max-width: 1279px) {
+      margin: 4.8rem 0;
+    }
+    @media only screen and (max-width: 767px) {
+      margin: 3.2rem 0;
+    }
+  }
+
   a:not([class]) {
     color: var(--blue);
     font-weight: 600;
@@ -242,11 +256,12 @@
   }
 }
 
-.article-text__icon {
+.article-text__icon.article-text__icon {
   margin-top: 4.8rem;
   width: 6.4rem;
   height: 6.4rem;
   object-fit: contain;
+  margin-bottom: 0;
 
   @media only screen and (max-width: 1279px) {
     width: 4.8rem;
