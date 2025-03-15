@@ -13,6 +13,7 @@ import subevent from "./pages-data/subevent";
 import subevent2 from "./pages-data/subevent-2";
 import subevent3 from "./pages-data/subevent-3";
 import subevent4 from "./pages-data/subevent-4";
+import reviews from "./pages-data/reviews";
 
 const pagesConfig = {
   ...home,
@@ -31,6 +32,7 @@ const pagesConfig = {
   ...subevent3,
   ...subevent4,
   ...process,
+  ...reviews,
 };
 
 export default pagesConfig;
