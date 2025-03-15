@@ -30,6 +30,7 @@ const pagesConfig = {
   ...subevent2,
   ...subevent3,
   ...subevent4,
+  ...process,
 };
 
 export default pagesConfig;

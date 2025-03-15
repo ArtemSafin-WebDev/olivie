@@ -1,0 +1,110 @@
+.steps {
+  margin-top: 9.6rem;
+  grid-column: 3 / 11;
+
+  @media only screen and (max-width: 1279px) {
+    margin-top: 8rem;
+  }
+  @media only screen and (max-width: 767px) {
+    margin-top: 4.8rem;
+  }
+}
+
+.steps__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+  list-style: none;
+}
+
+.steps__card {
+  display: grid;
+  grid-template-columns: 3.2rem 1fr;
+  grid-gap: 4rem;
+  grid-template-areas: "icon title" "dots text";
+  align-items: flex-start;
+  align-content: flex-start;
+  grid-row-gap: 3.6rem;
+
+  &::before {
+    content: "";
+    width: 100%;
+    align-self: stretch;
+    grid-area: dots;
+    background-image: url("../images/blue-circle.svg");
+    background-position: center top;
+    background-repeat: no-repeat repeat;
+    background-size: 0.8rem auto;
+  }
+
+  .steps__list-item:last-child & {
+    &::before {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    align-items: stretch;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.steps__card-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  object-fit: contain;
+  grid-area: icon;
+  align-self: flex-start;
+}
+
+.steps__card-content {
+  display: contents;
+}
+
+.steps__card-title {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.2rem;
+  letter-spacing: 0.072rem;
+  text-transform: uppercase;
+  font-family: var(--despair-display);
+  align-self: flex-start;
+  padding-top: 0.1rem;
+
+  @media only screen and (max-width: 767px) {
+    padding: 0;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.8rem;
+    letter-spacing: 0.06rem;
+    text-transform: uppercase;
+  }
+}
+
+.steps__card-text {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 3.2rem;
+  padding-bottom: 4rem;
+  grid-area: text;
+  position: relative;
+  top: -1rem;
+  @media only screen and (max-width: 767px) {
+    top: auto;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.4rem;
+    padding-top: 1.2rem;
+    padding-bottom: 0;
+  }
+}
