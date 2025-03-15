@@ -21,6 +21,7 @@ import whatWeDoFormats from "./whatWeDoFormats";
 import mediaModal from "./mediaModal";
 import ideas from "./ideas";
 import articleGallery from "./articleGallery";
+import otherFormats from "./otherFormats";
 
 document.addEventListener("DOMContentLoaded", () => {
   menu();
@@ -44,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   whatWeDoFormats();
   ideas();
   articleGallery();
+  otherFormats();
 });
 
 window.addEventListener("load", () => {

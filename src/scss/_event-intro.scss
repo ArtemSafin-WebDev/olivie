@@ -4,6 +4,18 @@
   background-color: var(--blue);
   color: white;
 
+  &--orange {
+    background-color: var(--orange);
+  }
+
+  &--violet {
+    background-color: var(--violet);
+  }
+
+  &--green {
+    background-color: var(--green);
+  }
+
   @media only screen and (max-width: 1279px) {
     margin-bottom: 8rem;
   }
@@ -21,16 +33,27 @@
   padding-top: 8rem;
   display: flex;
   flex-direction: column;
+
+  .event-intro--subevent & {
+    min-height: 48.4rem;
+  }
   @media only screen and (max-width: 1279px) {
     min-height: 72rem;
     padding-bottom: 2.8rem;
     padding-top: 10rem;
+    .event-intro--subevent & {
+      min-height: 43rem;
+    }
   }
 
   @media only screen and (max-width: 767px) {
     min-height: 59rem;
     padding-bottom: 1.6rem;
     padding-top: 14rem;
+
+    .event-intro--subevent & {
+      min-height: 34.6rem;
+    }
   }
 }
 
@@ -69,10 +92,10 @@
   display: flex;
   align-items: center;
   gap: 1.6rem;
-
-  @media only screen and (max-width: 767px) {
-    gap: 0.8rem;
-  }
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
 }
 .event-intro__breadcrumbs-link {
   display: flex;
@@ -82,19 +105,31 @@
   font-style: normal;
   font-weight: 500;
   line-height: 3rem;
-  min-width: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   flex-shrink: 1;
+  display: inline;
+  margin-right: 1.6rem;
+  &:last-child {
+    margin-right: 0;
+  }
   svg {
     flex-shrink: 0;
     width: 1.6rem;
     height: 1.6rem;
     fill: var(--violet);
+    margin-bottom: 0.2em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.3rem;
     @media only screen and (max-width: 767px) {
       width: 1.2rem;
       height: 1.2rem;
+      margin-bottom: 0.15em;
+    }
+  }
+
+  .event-intro__breadcrumbs--white & {
+    svg {
+      fill: white;
     }
   }
 
@@ -103,7 +138,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: 2.4rem;
-    gap: 0.8rem;
+    margin-right: 0.8rem;
   }
 }
 

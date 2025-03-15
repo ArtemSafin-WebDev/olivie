@@ -47,6 +47,15 @@ export default function whatWeDoFormats() {
         });
       });
 
+      window.addEventListener("load", () => {
+        const lines = detectLineBreaks();
+
+        lines.forEach((line) => {
+          line.forEach((item) => item.classList.remove("last"));
+          line[line.length - 1]?.classList.add("last");
+        });
+      });
+
       resizeObserver.observe(container);
     });
   });

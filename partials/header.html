@@ -4,36 +4,24 @@
             <div class="page-header__left">
                 <ul class="page-header__list">
                     <li class="page-header__list-item">
-                        <a href="#" class="page-header__link">
-                            Заполнить бриф
-                        </a>
+                        <a href="#" class="page-header__link"> Заполнить бриф </a>
                     </li>
                     <li class="page-header__list-item">
-                        <a href="#" class="page-header__link">
-                            Скачать презентацию
-                        </a>
+                        <a href="#" class="page-header__link"> Скачать презентацию </a>
                     </li>
                 </ul>
             </div>
             <div class="page-header__right">
-                <div class="page-header__title">
-                    Для тендеров и запросов пишите:
-                </div>
+                <div class="page-header__title">Для тендеров и запросов пишите:</div>
                 <ul class="page-header__list">
                     <li class="page-header__list-item">
-                        <a href="#" class="page-header__link">
-                            Hello@olivie.ru
-                        </a>
+                        <a href="#" class="page-header__link"> Hello@olivie.ru </a>
                     </li>
                     <li class="page-header__list-item">
-                        <a href="#" class="page-header__link">
-                            Telegram
-                        </a>
+                        <a href="#" class="page-header__link"> Telegram </a>
                     </li>
                     <li class="page-header__list-item">
-                        <a href="#" class="page-header__link">
-                            Whatsapp
-                        </a>
+                        <a href="#" class="page-header__link"> Whatsapp </a>
                     </li>
                 </ul>
             </div>
@@ -43,37 +31,31 @@
         <div class="page-header__bottom-inner">
             <a href="/" class="page-header__logo">
                 {{#if whiteHeader }}
-                    <img src="/images/logo-white.svg" alt="Лого" class="page-header__logo-image">
+                    {{#if fullWhiteLogo }}
+                        <img src="/images/logo-fullwhite.svg" alt="Лого" class="page-header__logo-image" />
+                    {{else}}
+                        <img src="/images/logo-white.svg" alt="Лого" class="page-header__logo-image" />
+                    {{/if}}
                 {{else}}
-                    <img src="/images/logo.svg" alt="Лого" class="page-header__logo-image">
+                    <img src="/images/logo.svg" alt="Лого" class="page-header__logo-image" />
                 {{/if}}
             </a>
             <nav class="page-header__nav">
                 <ul class="page-header__nav-list">
                     <li class="page-header__nav-list-item">
-                        <a href="#" class="page-header__nav-link">
-                            Портфолио
-                        </a>
+                        <a href="#" class="page-header__nav-link"> Портфолио </a>
                     </li>
                     <li class="page-header__nav-list-item">
-                        <a href="#" class="page-header__nav-link">
-                            О нас
-                        </a>
+                        <a href="#" class="page-header__nav-link"> О нас </a>
                     </li>
                     <li class="page-header__nav-list-item">
-                        <a href="#" class="page-header__nav-link">
-                            Что мы делаем
-                        </a>
+                        <a href="#" class="page-header__nav-link"> Что мы делаем </a>
                     </li>
                     <li class="page-header__nav-list-item">
-                        <a href="#" class="page-header__nav-link">
-                            Отзывы
-                        </a>
+                        <a href="#" class="page-header__nav-link"> Отзывы </a>
                     </li>
                     <li class="page-header__nav-list-item">
-                        <a href="#" class="page-header__nav-link">
-                            Процесс
-                        </a>
+                        <a href="#" class="page-header__nav-link"> Процесс </a>
                     </li>
                 </ul>
             </nav>
