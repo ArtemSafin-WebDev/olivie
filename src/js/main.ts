@@ -22,6 +22,10 @@ import mediaModal from "./mediaModal";
 import ideas from "./ideas";
 import articleGallery from "./articleGallery";
 import otherFormats from "./otherFormats";
+import textAreaSizer from "./textAreaSizer";
+import fileUpload from "./fileUpload";
+import datepicker from "./datepicker";
+import forms from "./forms";
 
 document.addEventListener("DOMContentLoaded", () => {
   menu();
@@ -46,6 +50,10 @@ document.addEventListener("DOMContentLoaded", () => {
   ideas();
   articleGallery();
   otherFormats();
+  textAreaSizer();
+  fileUpload();
+  datepicker();
+  forms();
 });
 
 window.addEventListener("load", () => {

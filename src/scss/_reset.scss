@@ -69,8 +69,6 @@ textarea {
   box-shadow: none;
   display: block;
   width: 100%;
-  overflow: auto;
-  height: 20rem;
 }
 
 input::-webkit-outer-spin-button,
@@ -148,10 +146,12 @@ img {
 }
 
 .validation-error {
-  font-size: 1.6rem;
-  line-height: 140%;
-  margin-top: 1rem;
-  color: #f60a18;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: var(--red);
+  margin-top: 0.8rem;
 }
 
 .page-main {

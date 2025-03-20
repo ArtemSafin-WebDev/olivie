@@ -1,0 +1,535 @@
+.brief-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+  z-index: 70;
+  transition: opacity 0.4s, visibility 0s linear 0.4s;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(black, 0.4);
+  color: white;
+  padding: 2rem var(--content-padding);
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+
+  body:not(.loaded) & {
+    display: none;
+  }
+
+  @media only screen and (max-width: 1279px) {
+    padding: 0;
+    @include blockWrapper;
+    padding-top: 2rem;
+    padding-bottom: 6.4rem;
+    background-color: #fff;
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding-bottom: 4.8rem;
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: inherit;
+    transition: opacity 0.4s, visibility 0.4s;
+  }
+}
+
+.brief-modal__content {
+  width: 100%;
+  margin: auto;
+  max-width: 80rem;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 2rem;
+  color: var(--text-color);
+  padding: 6.4rem 8rem;
+
+  @media only screen and (max-width: 1279px) {
+    @include blockContent;
+    padding: 0;
+    padding-top: 6rem;
+    border-radius: 0;
+    max-width: 91.2rem;
+    width: 100%;
+    justify-self: center;
+    background-color: transparent;
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding-top: 0;
+    max-width: none;
+    justify-self: stretch;
+  }
+}
+
+.brief-modal__close {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  right: 3.2rem;
+  top: 3.2rem;
+
+  @media only screen and (max-width: 1279px) {
+    top: 2rem;
+    right: 0;
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: 2.4rem;
+    height: 2.4rem;
+    top: 0;
+  }
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: rgba(160, 171, 180, 1);
+    transition: fill 0.2s;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      svg {
+        fill: var(--primary-color);
+      }
+    }
+  }
+}
+
+.brief-modal__heading {
+  font-size: 4.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 5.6rem;
+  letter-spacing: 0.144rem;
+  text-transform: uppercase;
+  font-family: var(--despair-display);
+  @media only screen and (max-width: 767px) {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.2rem;
+    letter-spacing: 0.072rem;
+    text-transform: uppercase;
+  }
+}
+
+.brief-modal__text {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.4rem;
+  margin-top: 2rem;
+
+  @media only screen and (max-width: 1279px) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.4rem;
+    max-width: 80rem;
+  }
+
+  @media only screen and (max-width: 767px) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.2rem;
+    margin-top: 2.4rem;
+    max-width: 34rem;
+  }
+}
+
+.brief-modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.brief-modal__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 6.4rem;
+  @media only screen and (max-width: 1279px) {
+    margin-top: 9.6rem;
+  }
+
+  @media only screen and (max-width: 767px) {
+    margin-top: 6.4rem;
+  }
+}
+
+.brief-modal__input {
+  display: block;
+  width: 100%;
+  padding-bottom: 1.6rem;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.4rem;
+  border-bottom: 1px solid #919191;
+  transition: border-color 0.2s;
+  color: var(--text-color);
+
+  @media only screen and (max-width: 767px) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.2rem;
+    padding-bottom: 1rem;
+  }
+
+  &::placeholder {
+    color: #919191;
+  }
+
+  &.not-valid {
+    border-color: var(--red);
+  }
+}
+
+textarea.brief-modal__input {
+  grid-area: stack;
+  padding-bottom: 1.5rem;
+  field-sizing: content;
+  height: auto;
+}
+
+.brief-modal__file-selected {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  display: none;
+  margin-top: 2.4rem;
+
+  .file-loaded & {
+    display: flex;
+  }
+}
+
+.brief-modal__file-icon {
+  flex-shrink: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  object-fit: contain;
+  margin-right: -0.4rem;
+}
+
+.brief-modal__file-selected-name {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.2rem;
+}
+
+.brief-modal__file-selected-size {
+  color: #888;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.2rem;
+}
+
+.brief-modal__file-remove {
+  flex-shrink: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: rgba(145, 145, 145, 1);
+    transition: fill 0.2s;
+  }
+}
+.brief-modal__day-time {
+  display: flex;
+  flex-direction: column;
+}
+
+.brief-modal__day-time-title {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.4rem;
+  margin-bottom: 2.8rem;
+  @media only screen and (max-width: 767px) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.2rem;
+    margin-bottom: 1.6rem;
+  }
+}
+
+.brief-modal__day {
+  margin-bottom: 1.2rem;
+
+  .air-datepicker--pointer {
+    display: none;
+  }
+  .air-datepicker-body--day-names {
+    margin: 0;
+  }
+  .air-datepicker-body--day-name {
+    font-size: 14px;
+    text-transform: none;
+  }
+
+  .air-datepicker-nav {
+    padding-top: calc(var(--adp-padding) * 0.7);
+    padding-bottom: calc(var(--adp-padding) * 0.5);
+  }
+
+  .air-datepicker--content {
+    padding-top: 0;
+  }
+  .air-datepicker-nav--title {
+    border: none;
+    font-family: var(--despair-display);
+    text-transform: uppercase;
+  }
+  .air-datepicker {
+    box-shadow: 0px 4px 20.7px 0px rgba(47, 47, 47, 0.14);
+    border: none;
+    --adp-padding: 20px;
+    --adp-border-radius: 8px;
+    --adp-background-color: white;
+    --adp-border-color: transparent;
+    --adp-cell-border-radius: 4px;
+    --adp-cell-background-color-selected: var(--green);
+    --adp-color: var(--text-color);
+    --adp-font-family: var(--roboto-flex);
+    --adp-color-disabled: #919191;
+    --adp-color-current-date: var(--green);
+    --adp-cell-background-color-selected-hover: var(--green);
+    --adp-background-color-selected-other-month-focused: var(--green);
+    --adp-background-color-selected-other-month: var(--green);
+    --adp-font-size: 14px;
+    --adp-day-name-color-hover: var(--green);
+    --adp-day-name-color: #919191;
+    --adp-accent-color: var(--green);
+    --adp-day-cell-height: 30px;
+    --adp-nav-height: auto;
+    --adp-border-color-inner: transparent;
+    --adp-nav-action-size: 30px;
+    --adp-background-color-hover: transparent;
+    --adp-nav-color-secondary: var(--text-color);
+    --adp-nav-arrow-color: var(--text-color);
+  }
+}
+
+.brief-modal__day-input {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.2rem;
+  letter-spacing: 0.096rem;
+  text-transform: uppercase;
+  font-family: var(--despair-display);
+  padding: 1.2rem 0.5rem;
+  border: 1.5px solid #004d43;
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+  color: var(--text-color);
+  width: 17.8rem;
+  border-radius: 10rem;
+  text-align: center;
+  &::placeholder {
+    color: var(--text-color);
+  }
+
+  &:not(:placeholder-shown) {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-color: var(--primary-color);
+  }
+}
+
+.brief-modal__time-checkboxes {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.brief-modal__time-checkbox {
+  flex-shrink: 0;
+  user-select: none;
+  cursor: pointer;
+}
+
+.brief-modal__time-checkbox-input {
+  display: none;
+}
+
+.brief-modal__time-checkbox-content {
+  display: block;
+  text-align: center;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.2rem;
+  padding: 1.2rem 2.3rem;
+  letter-spacing: 0.096rem;
+  text-transform: uppercase;
+  font-family: var(--despair-display);
+  border: 1.5px solid var(--primary-color);
+  transition: border-color 0.2s, background-color 0.2s, color 0.2s;
+  white-space: nowrap;
+  border-radius: 10rem;
+}
+
+.brief-modal__time-checkbox-input:checked
+  ~ .brief-modal__time-checkbox-content {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.brief-modal__file {
+  display: flex;
+  flex-direction: column;
+}
+
+.brief-modal__file-title {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.4rem;
+  color: #919191;
+  margin-bottom: 1.2rem;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.2rem;
+  }
+}
+
+.brief-modal__file-label {
+  position: relative;
+  display: block;
+}
+
+.brief-modal__file-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.brief-modal__file-label-text {
+  padding: 2rem;
+  display: block;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.2rem;
+  color: #919191;
+  border-radius: 0.8rem;
+  border: 1px dashed #919191;
+}
+
+.brief-modal__policy {
+  margin-top: 4.8rem;
+
+  @media only screen and (max-width: 767px) {
+    margin-top: 6.4rem;
+  }
+}
+
+.brief-modal__policy-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  gap: 1.6rem;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.2rem;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.8rem;
+  }
+}
+
+.brief-modal__policy-checkbox-input {
+  display: none;
+}
+
+.brief-modal__policy-checkbox-mark {
+  flex-shrink: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 0.4rem;
+  border: 1px solid black;
+  transition: border-color 0.2s, background-color 0.2s;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: var(--text-color);
+    transition: opacity 0.2s;
+    opacity: 0;
+  }
+}
+
+.brief-modal__policy-checkbox-input:checked
+  ~ .brief-modal__policy-checkbox-mark {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  svg {
+    opacity: 1;
+  }
+}
+
+.brief-modal__submit {
+  align-self: flex-start;
+  margin-top: 4rem;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.2rem;
+  letter-spacing: 0.072rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: var(--despair-display);
+  padding: 1.6rem 3.2rem;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  border-radius: 6rem;
+  transition: background-color 0.2s, color 0.2s;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: var(--primary-color-hover);
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding: 1.3rem 2.4rem;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.2rem;
+    letter-spacing: 0.096rem;
+    text-transform: uppercase;
+    margin-top: 2.8rem;
+  }
+}

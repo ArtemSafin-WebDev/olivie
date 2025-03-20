@@ -1,0 +1,129 @@
+<div class="brief-modal js-modal">
+    <div class="brief-modal__content">
+        <button class="brief-modal__close js-modal-close" type="button">
+            <svg width="14" height="14" aria-hidden="true">
+                <use xlink:href="#modal-close"></use>
+            </svg>
+        </button>
+        <h3 class="brief-modal__heading">
+            бриф
+        </h3>
+        <div class="brief-modal__text">
+            Это процесс сбора информации у клиента о его желаниях, потребностях, целях и ожиданиях относительно
+            конкретного проекта или задачи.
+        </div>
+        <form action="/" method="POST" class="brief-modal__form js-form" enctype="multipart/form-data">
+            <div class="brief-modal__fields">
+                <div class="brief-modal__field">
+                    <div class="brief-modal__input-wrapper">
+                        <input type="text" class="brief-modal__input" placeholder="Ваше имя" required=""
+                            name="your-name">
+                    </div>
+                </div>
+                <div class="brief-modal__field">
+                    <div class="brief-modal__input-wrapper">
+                        <input type="text" class="brief-modal__input" placeholder="Компания" name="your-company">
+                    </div>
+                </div>
+                <div class="brief-modal__field">
+                    <div class="brief-modal__input-wrapper">
+                        <input type="email" class="brief-modal__input" placeholder="E-mail" name="your-email"
+                            required="">
+                    </div>
+                </div>
+                <div class="brief-modal__day-time">
+                    <h4 class="brief-modal__day-time-title">
+                        Выбрать день и время для звонка
+                    </h4>
+                    <div class="brief-modal__day">
+                        <input type="text" class="brief-modal__day-input js-datepicker" placeholder="выбрать день"
+                            readonly="">
+                    </div>
+                    <div class="brief-modal__time-checkboxes">
+                        <label class="brief-modal__time-checkbox">
+                            <input type="radio" class="brief-modal__time-checkbox-input" name="time"
+                                value="10:00—14:00">
+                            <span class="brief-modal__time-checkbox-content">
+                                10:00—14:00
+                            </span>
+                        </label>
+                        <label class="brief-modal__time-checkbox">
+                            <input type="radio" class="brief-modal__time-checkbox-input" name="time"
+                                value="14:00—18:00">
+                            <span class="brief-modal__time-checkbox-content">
+                                14:00—18:00
+                            </span>
+                        </label>
+                        <label class="brief-modal__time-checkbox">
+                            <input type="radio" class="brief-modal__time-checkbox-input" name="time"
+                                value="18:00—21:00">
+                            <span class="brief-modal__time-checkbox-content">
+                                18:00—21:00
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="brief-modal__field">
+                    <div class="brief-modal__input-wrapper">
+
+                        <textarea class="brief-modal__input" placeholder="Расскажите о проекте" name="your-project"
+                            rows="1"></textarea>
+
+
+                    </div>
+                </div>
+                <div class="brief-modal__field">
+                    <div class="brief-modal__input-wrapper">
+                        <input type="text" class="brief-modal__input" placeholder="Бюджет мероприятия"
+                            name="your-budget">
+                    </div>
+                </div>
+                <div class="brief-modal__file js-file-upload">
+                    <h4 class="brief-modal__file-title">
+                        Прикрепите ТЗ
+                    </h4>
+                    <label class="brief-modal__file-label">
+                        <input type="file"
+                            accept=".rtf,.doc,.docx,.xls,.xlsx,.zip,.rar,.pdf,application/rtf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/zip,application/x-rar-compressed,application/pdf"
+                            class="brief-modal__file-input" name="your-file" />
+                        <span class="brief-modal__file-label-text">
+                            Выберите файл с расширением: rtf, doc, docx, xls, xlsx, zip, rar, pdf. Максимальный размер
+                            файла: 50 МБ.
+                        </span>
+                    </label>
+                    <div class="brief-modal__file-selected">
+                        <img src="/images/file.png" alt="" class="brief-modal__file-icon">
+                        <span class="brief-modal__file-selected-name js-file-upload-text">
+                            Бриф на корпоративное мероприятие.pdf
+                        </span>
+                        <span class="brief-modal__file-selected-size js-file-upload-size">
+                            2.30 Мб
+                        </span>
+                        <button class="brief-modal__file-remove js-file-upload-clear" type="button">
+                            <svg width="14" height="14" aria-hidden="true">
+                                <use xlink:href="#clear-file"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="brief-modal__policy">
+                <label class="brief-modal__policy-checkbox">
+                    <input type="checkbox" class="brief-modal__policy-checkbox-input" name="policy" required=""
+                        value="Y">
+                    <span class="brief-modal__policy-checkbox-mark">
+                        <svg width="14" height="14" aria-hidden="true">
+                            <use xlink:href="#checkmark"></use>
+                        </svg>
+                    </span>
+                    <span class="brief-modal__policy-checkbox-text">
+                        Нажимая на кнопку, вы даете согласие на обработку персональных данных
+                    </span>
+                </label>
+            </div>
+            <button class="brief-modal__submit" type="submit">
+                отправить
+            </button>
+        </form>
+    </div>
+</div>
