@@ -26,6 +26,7 @@ import textAreaSizer from "./textAreaSizer";
 import fileUpload from "./fileUpload";
 import datepicker from "./datepicker";
 import forms from "./forms";
+import cookies from "./cookies";
 
 document.addEventListener("DOMContentLoaded", () => {
   menu();
@@ -54,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fileUpload();
   datepicker();
   forms();
+  cookies();
 });
 
 window.addEventListener("load", () => {
