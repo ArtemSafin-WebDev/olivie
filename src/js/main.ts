@@ -27,6 +27,7 @@ import fileUpload from "./fileUpload";
 import datepicker from "./datepicker";
 import forms from "./forms";
 import cookies from "./cookies";
+import heart from "./heart";
 
 document.addEventListener("DOMContentLoaded", () => {
   menu();
@@ -56,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
   datepicker();
   forms();
   cookies();
+  heart();
 });
 
 window.addEventListener("load", () => {
