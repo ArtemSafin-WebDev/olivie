@@ -21,7 +21,7 @@ export default function formats() {
       });
 
       tl.to("path", {
-        rotate: 270,
+        rotate: 45,
         transformOrigin: "center",
         ease: "none",
       });

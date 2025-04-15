@@ -84,6 +84,12 @@
     color: var(--green);
   }
 
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--primary-color-hover);
+    }
+  }
+
   @media only screen and (max-width: 767px) {
     gap: 1rem;
   }
@@ -206,7 +212,15 @@
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      color: var(--violet);
+      color: var(--green);
+    }
+  }
+
+  .page-header--white & {
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--accent-color, white);
+      }
     }
   }
 }

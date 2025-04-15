@@ -75,7 +75,7 @@
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      color: white;
+      color: var(--primary-color-hover);
     }
   }
 
